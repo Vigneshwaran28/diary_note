@@ -316,7 +316,7 @@ def intro():
         frame, text="Login", bg='#333333', fg="#FF3399", font=("Arial", 30))
     username_label = Label(
         frame, text="Username", bg='#333333', fg="#FFFFFF", font=("Arial", 16))
-    username_entry = Entry(frame, font=("Arial", 16)
+    username_entry = Entry(frame, font=("Arial", 16))
     password_entry = Entry(frame, show="*", font=("Arial", 16))
     password_label = Label(
         frame, text="Password", bg='#333333', fg="#FFFFFF", font=("Arial", 16))
