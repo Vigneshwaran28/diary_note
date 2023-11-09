@@ -232,7 +232,7 @@ def diary():
 
 # About function
 def about():
-    tk2 = ThemedTk(theme="winxpblue")
+    tk2 = Tk()
     tk2.geometry('200x200')
     tk2.configure(borderwidth=7)
     lab = Label(tk2, text="About the author")
@@ -254,7 +254,7 @@ def back():
 
 # Main function
 def main():
-    root = ThemedTk(theme="arc")
+    root = Tk()
     root.geometry('300x300')
     root.title("Digital Diary")
     l1 = Label(root, text="", fg="black", bg="black")
