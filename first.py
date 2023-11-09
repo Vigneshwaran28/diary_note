@@ -5,7 +5,6 @@ from tkinter import Label, Button
 import time
 import datetime
 import sqlite3
-from ttkthemes import ThemedTk
 
 # Connect to the SQLite database
 conn = sqlite3.connect('MemoriesDiary.db')
@@ -85,7 +84,7 @@ def Dupdate():
     Mv.geometry("300x300")
 
     # Create a frame to organize widgets
-    frame = Frame(Mv)
+    frame = Frame(Mv,bg="black")
     frame.pack(padx=10, pady=10)
 
     Label(frame, text="Page No. :").grid(row=0, column=0, sticky='w')
@@ -172,14 +171,12 @@ def diary():
     if students:
         for student in students:
             vf.config(text="Last page No: " + str(student[0]))
-    else:
-        msg.showinfo("Error", "No records found")
 
     vf.pack(side=TOP, anchor='se')
 
     # Create and pack labels and input fields
     Label(tk1, text="Write down your Memories", font=("courier", 12), fg="black", bg="white").pack()
-    frame = Frame(tk1)
+    frame = Frame(tk1,bg="black")
     frame.pack(padx=10, pady=10)
 
     Label(frame, text="Enter the Date (dd/mm/yyyy):", font=("courier", 10), fg="black", bg="white").grid(row=1, column=0, sticky='w')
@@ -338,5 +335,3 @@ def intro():
 
 if __name__ == "__main__":
     intro()
-    cursor.close()
-    conn.close()
